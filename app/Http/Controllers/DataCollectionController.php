@@ -43,4 +43,16 @@ class DataCollectionController extends Controller
 
     }
 
+    public function test(Request $request){
+
+       
+        return response()->json([
+            'status'=> true,
+            'message' => 'test success',
+            // 'data'=> $newdata,
+        ],200);
+    }
+
+   
+
 }
