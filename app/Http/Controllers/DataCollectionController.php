@@ -38,7 +38,7 @@ class DataCollectionController extends Controller
         return response()->json([
             'status'=> true,
             'message' => 'success',
-            'data'=> $request->all(),
+            'data'=> $newdata,
         ],200);
 
     }
