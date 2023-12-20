@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\FileController;
+use App\Http\Controllers\DataCollectionController;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -62,4 +63,9 @@ Route::post('/logout-user', function (Request $request) {
 
 
 Route::post('/upload-file', [FileController::class , 'uploadFile'])->name('upload-file');
+Route::prefix('data-collection')->name('data-collection.')->controller(DataCollectionController::class)->group(function(){
+   
+    Route::post('create', 'create' )->name('create');
 
+});
+// ->middleware(['auth:sanctum']);
