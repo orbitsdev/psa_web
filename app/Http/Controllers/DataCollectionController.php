@@ -17,7 +17,7 @@ class DataCollectionController extends Controller
             'first_name' => $request->first_name ?? null,
             'last_name' => $request->last_name ?? null,
             'middle_name' => $request->middle_name ?? null,
-            'date_of_birth' => $request->dadate_of_birthte ?? null,
+            'date_of_birth' => $request->date_of_birth ?? null,
             'place_of_birth_city' => $request->place_of_birth_city ?? null,
             'place_of_birth_province' => $request->place_of_birth_province ?? null,
             'place_of_birth_country' => $request->place_of_birth_country ?? null,
