@@ -1,11 +1,15 @@
-<div class="h-full border-2 border-gray-600 rounded-sm">
+<div class="h-full">
+    <div class="text-lg py-3">
+        <h1 class=" tracking-wider text-gray-500 font-semibold">Map of General Santos City</h1>
+    </div>
     <style>
         #map {
             height: 600px; /* Set a specific height for the map container */
             width: 100%; /* Set width to fill the available space */
         }
     </style>
-    <div id="map">ss</div>
+
+    <div id="map" class=" border-2 border-gray-600 rounded-sm"></div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyBh1oNe0wqgv4NBQ3AjbxGYIh5mvl9YU&callback=initMap" async></script>
     <script>
