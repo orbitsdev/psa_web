@@ -13,6 +13,7 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyBh1oNe0wqgv4NBQ3AjbxGYIh5mvl9YU&callback=initMap" async></script>
     <script>
+
         let map, activeInfoWindow, markers = [];
 
         function initMap() {
@@ -31,21 +32,21 @@
                     },
                     // Add more styling options if needed
                 ],
-
             });
-                // Define the coordinates for the marker
-                    const markerCoordinates = {
-                    lat: 6.117278,
-                    lng: 125.171583,
-                };
 
-                // Create a marker and set its position on the map
-                const marker = new google.maps.Marker({
-                    position: markerCoordinates,
-                    map: map,
-                    title: 'Marker Title' // Optional: Add a title to the marker
-                });
+            // Define the coordinates for the marker
+            const markerCoordinates = {
+                                lat: 6.117278,
+                                lng: 125.171583,
+                            };
+
+                            // Create a marker and set its position on the map
+                            const marker = new google.maps.Marker({
+                                position: markerCoordinates,
+                                map: map,
+                                title: 'Marker Title' // Optional: Add a title to the marker
+                            });
+
         }
     </script>
-
 </div>
