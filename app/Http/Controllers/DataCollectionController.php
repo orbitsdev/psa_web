@@ -34,6 +34,13 @@ class DataCollectionController extends Controller
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+
+
+        $newdata = DataCollection::create([
+            // ... other fields
+            'date_of_birth' => Carbon::parse($request->date_of_birth)->toDateString(), // Format to string
+            
+        ]);
         
 
         return response()->json([
