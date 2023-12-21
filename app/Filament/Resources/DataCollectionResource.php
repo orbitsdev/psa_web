@@ -164,8 +164,7 @@ class DataCollectionResource extends Resource
                 ->columns(1),
                 InfolistGrid::make()
                 ->schema([
-                    TextEntry::make('latitude')
-                    ->since(),
+                    TextEntry::make('latitude'),
                     TextEntry::make('longitude'),
                 ])->columns(2),
 
