@@ -13,6 +13,6 @@ class DataCollectionSeeder extends Seeder
      */
     public function run(): void
     {
-        DataCollection::factory(20)->create();
+        DataCollection::factory(3)->create();
     }
 }

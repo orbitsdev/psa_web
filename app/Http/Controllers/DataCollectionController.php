@@ -28,25 +28,23 @@ class DataCollectionController extends Controller
             'mother_first_name' => $request->mother_first_name?? null,
             'mother_last_name' => $request->mother_last_name?? null,
             'mother_middle_name' => $request->mother_middle_name?? null,
-            'latitude' => floatval($request->latitude)?? null,
-            'longitude' => floatval($request->longitude)?? null,
+            'latitude' =>  $request->latitude?? null,
+             'longitude' => $request->latitude?? null,
             'place_id' => $request->place_id?? null,
+            'address' => $request->address?? null,
             'created_at' => now(),
             'updated_at' => now(),
         ]);
 
 
-        $newdata = DataCollection::create([
-            // ... other fields
-            'date_of_birth' => Carbon::parse($request->date_of_birth)->toDateString(), // Format to string
-            
-        ]);
         
+        $newdata->date_of_birth  = Carbon::parse($newdata->date_of_birth)->toDateString(); // Format to string
+
 
         return response()->json([
             'status'=> true,
             'message' => 'success',
-            'data'=> $request->all(),
+            'data'=> $newdata,
         ],200);
 
     }

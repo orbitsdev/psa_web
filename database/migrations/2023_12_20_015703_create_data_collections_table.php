@@ -29,8 +29,8 @@ return new class extends Migration
             $table->string('mother_middle_name')->nullable();
 
 
-            $table->double('latitude')->nullable();
-            $table->double('longitude')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             
             $table->string('place_id')->nullable();
             $table->text('image')->nullable();
