@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DataCollection;
+use Illuminate\Support\Carbon;
 
 class DataCollectionController extends Controller
 {
@@ -18,7 +19,7 @@ class DataCollectionController extends Controller
             'last_name' => $request->last_name ?? null,
             'middle_name' => $request->middle_name ?? null,
             'date_of_birth' => $request->date_of_birth ?? null,
-            'place_of_birth_city' => $request->place_of_birth_city ?? null,
+            'place_of_birth_city' => Carbon::parse($request->date_of_birth) ?? null,
             'place_of_birth_province' => $request->place_of_birth_province ?? null,
             'place_of_birth_country' => $request->place_of_birth_country ?? null,
             'father_first_name' => $request->father_first_name ?? null,
