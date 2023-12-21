@@ -152,8 +152,8 @@ class DataCollectionResource extends Resource
                 ])->columns(3),
                 InfolistGrid::make()
                 ->schema([
-                    TextEntry::make('date_of_birth')
-                    ->since(),
+                    TextEntry::make('date_of_birth')->date(),
+                    // ->since(),
                     TextEntry::make('place_of_birth_city')
                     ->label('Place of Birth (City)'),
                 ])->columns(2),
