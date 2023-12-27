@@ -1,4 +1,4 @@
 @extends('layouts.app')
         <div>
-            <livewire:dashboard-map /> <!-- Render your Livewire component here -->
+            <livewire:dashboard-map />
         </div>
