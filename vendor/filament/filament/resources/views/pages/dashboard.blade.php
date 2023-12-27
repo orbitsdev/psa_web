@@ -1,5 +1,5 @@
 <x-filament-panels::page class="fi-dashboard-page">
-    @include('livewire.dashboard-map')
+    {{-- @include('livewire.dashboard-map') --}}
     {{-- <livewire:dashboard-map /> --}}
     @if (method_exists($this, 'filtersForm'))
         {{ $this->filtersForm }}
