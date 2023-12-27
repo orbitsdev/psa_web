@@ -125,7 +125,10 @@ class DataCollectionResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                    Tables\Actions\DeleteBulkAction::make(),
                 ]),
-            ]);
+            ])
+            ->modifyQueryUsing(fn (Builder $query) => $query->latest())
+
+            ;
     }
 
     public static function infolist(Infolist $infolist): Infolist
